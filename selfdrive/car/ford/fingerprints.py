@@ -29,6 +29,7 @@ FW_VERSIONS = {
       b'LX6C-14D003-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LX6C-14D003-AK\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LX6C-14D003-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'K2GC-14D003-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #STRATEGY_FUSION_HYBRID_AWD2017_PSCM
     ],
     (Ecu.abs, 0x760, None): [
       b'LX6C-2D053-NS\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
@@ -36,6 +37,8 @@ FW_VERSIONS = {
       b'LX6C-2D053-NY\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LX6C-2D053-SA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LX6C-2D053-SD\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'HG9C-2D053-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #STRATEGY_FUSION_HYBRID_ABS
+      b'HG9C-2D053-MG\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #STRATEGY_FUSION_AWD2017_ABS
     ],
     (Ecu.fwdRadar, 0x764, None): [
       b'LB5T-14D049-AB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
@@ -44,21 +47,7 @@ FW_VERSIONS = {
       b'LJ6T-14F397-AD\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LJ6T-14F397-AE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'LV4T-14F397-GG\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-  },
-  CAR.FORD_EDGE_MK2: {
-    (Ecu.eps, 0x730, None): [
-      b'M2GC-14D003-AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.abs, 0x760, None): [
-      b'M2GC-2D053-CB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-      b'M2GC-2D053-EA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.fwdRadar, 0x764, None): [
-      b'JX7T-14D049-AD\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.fwdCamera, 0x706, None): [
-      b'KT4T-14F397-AF\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'KT4T-14F397-AE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #STRATEGY_FUSION_HYBRID_AWD2017_CAMERA
     ],
   },
   CAR.FORD_ESCAPE_MK4_23REFRESH: {
@@ -109,8 +98,7 @@ FW_VERSIONS = {
       b'ML3V-14D003-BC\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.abs, 0x760, None): [
-      # b'PL34-2D053-CA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-      b'PL34-2D053\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'PL34-2D053-CA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.fwdRadar, 0x764, None): [
       b'ML3T-14D049-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
@@ -118,9 +106,6 @@ FW_VERSIONS = {
     (Ecu.fwdCamera, 0x706, None): [
       b'ML3T-14H102-ABR\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'PJ6T-14H102-ABJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.hud, 0x720, None): [
-      b'NU5T-10F906\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
   },
   CAR.FORD_F_150_LIGHTNING_MK1: {
@@ -132,10 +117,6 @@ FW_VERSIONS = {
     ],
     (Ecu.fwdRadar, 0x764, None): [
       b'ML3T-14D049-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.hud, 0x720, None): [
-      b'NU5T-10F906\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-	  # b'NU5T-10F906-FCC\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
   },
   CAR.FORD_MUSTANG_MACH_E_MK1: {
@@ -151,10 +132,6 @@ FW_VERSIONS = {
     ],
     (Ecu.fwdCamera, 0x706, None): [
       b'ML3T-14H102-ABS\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.hud, 0x720, None): [
-      b'PJ8T-14C026\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-      # b'LJ8T-14C026-LT\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
   },
   CAR.FORD_FOCUS_MK4: {
@@ -202,21 +179,6 @@ FW_VERSIONS = {
     ],
     (Ecu.fwdCamera, 0x706, None): [
       b'PJ6T-14H102-ABJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-  },
-  CAR.FORD_FUSION_RTF: { #Fusion 2013-2019 Retrofited LCA with parts EDGE_ST - (PSCM + IPMA + CCM + SCCM)
-    (Ecu.eps, 0x730, None): [
-      b'K2GC-14D003-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #EDGE_ST
-    ],
-    (Ecu.abs, 0x760, None): [
-      b'HG9C-2D053-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #FUSION_HYBRID
-      b'HG9C-2D053-MG\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #FUSION_AWD
-    ],
-    (Ecu.fwdRadar, 0x764, None): [
-      b'LB5T-14D049-AB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #EDGE_ST
-    ],
-    (Ecu.fwdCamera, 0x706, None): [
-      b'KT4T-14F397-AE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', #EDGE_ST
     ],
   },
 }
