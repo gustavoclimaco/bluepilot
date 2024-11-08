@@ -115,6 +115,11 @@ class CAR(Platforms):
     CarSpecs(mass=1933, steerRatio=15.3, wheelbase=2.824),
     flags=FordFlags.ALT_STEER_ANGLE,
   )
+  FORD_FUSION_RTF = FordPlatformConfig(
+    [FordCarDocs("Ford Fusion Retrofited 2013-2019")],
+    CarSpecs(mass=1691, steerRatio=15.3, wheelbase=2.85),
+    flags=FordFlags.ALT_STEER_ANGLE,
+  )
   FORD_ESCAPE_MK4 = FordPlatformConfig(
     [
       FordCarDocs("Ford Escape 2020-22", hybrid=True, plug_in_hybrid=True),
