@@ -209,16 +209,6 @@ class CarState(CarStateBase):
         ("INSTRUMENT_PANEL", 1),
       ]
 
-    if CP.transmissionType == TransmissionType.automatic:
-      messages += [
-        ("Gear_Shift_by_Wire_FD1", 10)
-      ]
-    elif CP.transmissionType == TransmissionType.manual:
-      messages += [
-        ("Engine_Clutch_Data", 33),
-        ("BCM_Lamp_Stat_FD1", 1),
-      ]
-
     if CP.enableBsm and not (CP.flags & FordFlags.CANFD):
       messages += [
         ("Side_Detect_L_Stat", 5),
