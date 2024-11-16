@@ -93,11 +93,8 @@ class CarInterface(CarInterfaceBase):
 
     # Auto Transmission: 0x732 ECU or Gear_Shift_by_Wire_FD1
     found_ecus = [fw.ecu for fw in car_fw]
-    if Ecu.shiftByWire in found_ecus or 0x5A in fingerprint[CAN.main] or docs:
-      ret.transmissionType = TransmissionType.automatic
-    else:
-      ret.transmissionType = TransmissionType.manual
-      ret.minEnableSpeed = 20.0 * CV.MPH_TO_MS
+    ret.transmissionType = TransmissionType.automatic
+ 
 
     # BSM: Side_Detect_L_Stat, Side_Detect_R_Stat
     # TODO: detect bsm in car_fw?
